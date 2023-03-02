@@ -1,0 +1,14 @@
+/***** Styles for tablet (834px break point) *****/
+body {
+  padding: 0 40px;
+}
+.banner {
+  height:530px;
+}
+.banner-left-container {
+  margin: 0 20px 0 0;
+}
+.bean-cards-container {
+  gap: 24px;
+  margin-bottom: 80px;
+}

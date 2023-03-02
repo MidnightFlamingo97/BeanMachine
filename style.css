@@ -1,0 +1,293 @@
+:root{
+  --background:#FFFFFF;
+  --background-dark:#1D1C1C;
+  --card:#F6F2EF;
+  --accent-magenta:#FF5678;
+  --accent-green:#149770;
+  --text-primary:#1D1C1C;
+  --text-secondary:#787878;
+  --text-reversed:#FFFFFF;
+}
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0 8%;
+}
+
+/***** Headings & Text *****/
+h1 {
+  font-family: Nunito;
+  font-size: 88px;
+  font-weight: 800;
+}
+h2 {
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 800;
+font-size: 48px;
+line-height: 65px;
+  margin-bottom: 24px;
+}
+h3 {
+  font-family: Nunito;
+  font-size: 40px;
+  font-weight: 600;
+}
+label {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 700;
+}
+p {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+a {
+  color: var(--accent-magenta);
+}
+
+/***** Buttons *****/
+.btn1 {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-reversed);
+  background-color: var(--accent-magenta);
+  letter-spacing: 3px;
+  border-radius: 24px;
+  padding: 8px 25px;
+  border: none;
+}
+.btn2 {
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+}
+.btn1:hover, .btn2:hover {
+  cursor: pointer;
+}
+
+/***** Header *****/
+header {
+  height:100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  width:207.1px;
+  height: 18.02px;
+}
+nav {
+  display: flex;
+  gap:37px;
+  align-items: center;
+}
+/***** Banner Section*****/
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:700px;
+}
+.banner-left-container {
+  flex: 0 0 456px;
+  margin-right: 40px;
+}
+.banner h1 {
+  margin-bottom: 16px;
+}
+.banner h3 {
+  margin-bottom: 40px;
+}
+.search-box {
+  display: flex;
+}
+.search-box input {
+  width: 328px;
+  height: 64px;
+  background: var(--card);
+  border-radius: 16px;
+  border: none;
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  padding: 0 24px;
+  margin-right: 16px;
+}
+.search-box button {
+  height: 64px;
+  width: 64px;
+  border-radius: 64px;
+  font-size: 40px;
+  letter-spacing: 0;
+  padding: 0;
+}
+.banner img {
+  flex: 0 1 700px;
+  min-width: 0
+}
+/***** About Section*****/
+.about {
+  padding:80px 0;
+  border-top: solid 2px var(--background-dark);
+  border-bottom: solid 2px var(--background-dark);
+}
+/***** Special Offers Section*****/
+.special-offers h2 {
+  margin-top: 80px;
+}
+.bean-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px 0 120px 0;
+  gap: 40px;
+}
+.bean-card {
+  height: 320px;
+  padding: 40px;
+  background-color: var(--card);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 0 285px;
+  /* max width prevents flex-grow past size of card above, maintaining tile structure*/
+  max-width: calc(50% - 100px);
+}
+  /* media query removes max-width so stacked items can flex-grow to full width*/
+@media screen and (max-width:916px){
+  .bean-card {
+    max-width:none;
+  }
+}
+.bean-image-container {
+  border-radius: 16px;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+.bean-image-1 {
+  background-image: url("/assets/pexels-pixabay-209476.jpg");
+}
+.bean-image-2 {
+  background-image: url("/assets/pexels-lukas-669161.jpg");
+}
+.bean-image-3 {
+  background-image: url("/assets/pexels-âªroman-bengaievâ¬â-3914189.jpg");
+}
+.bean-card img {
+  border-radius: 16px;
+  width: 100%;
+  height: 200px;
+}
+.bean-card button {
+  padding: 12px 53px;
+}
+/***** Footer *****/
+footer {
+  height:200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--text-reversed);
+  gap:16px;
+}
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Used seperate background with position:absolute; to extend past body padding*/
+.footer-background {
+  height: 200px;
+  width: 100vw;
+  max-width: 100%;
+  background-color: var(--background-dark);
+  position: absolute;
+  z-index: -1;
+}
+
+/****** Selection Page ******/
+.selection-title-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selection-sort-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.sort-button {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--card);
+  border-radius: 24px;
+  width: 112px;
+}
+.sort-button-text {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.bean-selection-card {
+  height: 365px;
+  padding: 40px;
+  background-color: var(--card);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  flex: 1 0 285px;
+    /* max width prevents flex-grow past size of card above, maintaining tile structure*/
+  max-width: calc(50% - 100px);
+}
+  /* media query removes max-width so stacked items can flex-grow to full width*/
+@media screen and (max-width:916px){
+  .bean-selection-card {
+    max-width:none;
+  }
+}
+
+.in-stock-label {
+  position: absolute;
+  background-color: var(--accent-green);
+  color: var(--text-reversed);
+  line-height: 27.28px;
+  padding: 6px 16px;
+  border-radius: 32px 0 0 32px;
+  top: 20px;
+  right: 0;
+}
+.bean-selection-card-info {
+  width: 100%;
+}
+.bean-selection-card-title-container {
+  display: flex;
+  justify-content: space-between;
+}
+.bean-selection-card button {
+  padding: 12px 53px;
+}
